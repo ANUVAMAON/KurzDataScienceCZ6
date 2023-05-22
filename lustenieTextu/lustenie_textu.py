@@ -19,13 +19,11 @@ for file in files:
             objects.append(pickle.load(openfile))
 
         text += objects[0] + " "
-        openfile.close
 
 for file in files:
     if file.endswith("json"):
         with open(file, 'rb') as openfile:
             text_in_file = json.load(openfile)
             text += text_in_file + " "
-            openfile.close
 
 print(text)
